@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace dandd.Models
 {
-    internal class RaceModel
+    public class RaceModel
     {
-        public string Raca { get; set; }
+        public string index { get; set;}
 
-        public int Dano { get; set; }
+        public string name { get; set;}
 
-        public int Velocidade { get; set; }
+        public string full_name { get; set;}
+
+        public string desc { get; set;}
+
+        public int skills { get; set;}
     }
 }

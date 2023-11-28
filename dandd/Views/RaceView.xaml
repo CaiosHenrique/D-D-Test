@@ -37,10 +37,12 @@
              HorizontalOptions="Fill">
             </BoxView>
             <Label Text=""></Label>
-            
+            <Image Source="dice.png" WidthRequest="45" VerticalOptions="EndAndExpand" FlexLayout.Shrink="2000"/>
+
             <BoxView Color="Gray"
-             HeightRequest="40"
-             HorizontalOptions="End">
+             HeightRequest="50"
+             HorizontalOptions="Fill"
+             VerticalOptions="EndAndExpand">
             </BoxView>
             
 
