@@ -35,7 +35,7 @@ namespace dandd.ViewModels
 
         private async Task RenderName()
         {
-            name = await GetName();
+            name = await GetRacaAsync);
         }
         public string GetName(RaceModel Name)
         {

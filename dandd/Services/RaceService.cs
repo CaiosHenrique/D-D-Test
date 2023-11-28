@@ -24,7 +24,26 @@ namespace dandd.Services
             client = new HttpClient();
             _serializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
-
-        
+        public async Task<ObservableCollection<RaceModel>> GetRacaAsync()
+        {
+            var url = $"{baseUrl}/";
+            try
+            {
+                var response = await client.GetAsync(baseUrl);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    return JsonSerializer.Deserialize<ObservableCollection<RaceModel>>(content, _serializerOptions);
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return null;
+            }
+        }
     }
+
+}
 }
